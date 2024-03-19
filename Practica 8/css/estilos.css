@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    background-color: #eee;
+    display: flex;
+    min-height: 100vh;
+}
+
+.contenedor {
+    margin: auto;
+    perspective: 700px;
+    perspective-origin: center;
+}
+
+.caja {
+    width: 200px;
+    height: 200px;
+    background: crimson;
+    transition: all 2s;
+    transform: rotateX(0deg);
+    transform-style: preserve-3d;
+    perspective: 700px;
+}
+
+.cara {
+    width: 200px;
+    height: 200px;
+    background: gold;
+    margin: auto;
+    transform: rotateY(90deg);
+}
+
+.caja:hover {
+    transform: rotateY(360deg);
+}
