@@ -64,8 +64,24 @@ let listaPeliculas = document.getElementById("lista2");
 lista.innerHTML = "";
 for(let pelicula of peliculas) {
     console.log(pelicula.nombre);
-    listaPeliculas.innerHTML += "<div class='col-12 col-md-4 text-center'>"
-    listaPeliculas.innerHTML += "<p>" + pelicula.nombre + "</p>";
-    listaPeliculas.innerHTML += "<img src='" + pelicula.imagen + "' class='w-75'>" 
-    listaPeliculas.innerHTML += "</div>"
+    listaPeliculas.innerHTML += "<div class='col-12 col-md-4 text-center'>" +
+    "<p class='color-red'>" + pelicula.nombre + "</p>" +
+    "<img src='" + pelicula.imagen + "' class='w-75'>" + "</div>"
 }
+
+j = 1;
+
+while(j < 30) {
+    console.log(j);
+    j++;
+}
+
+let result = 0;
+let i = 0;
+
+do {
+    i++;
+    result++;
+} while(i < 5)
+console.log("Result:", result); 
+
