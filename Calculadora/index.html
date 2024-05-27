@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h2><span>Calculadora</span></h2>
+            <div class="display">
+                <input id="screen" type="text" placeholder="0">
+            </div>
+            <div class="calculadora">
+                <div class="row">
+                    <button id="ac" onclick="limpiar()">AC</button>
+                    <button id="ce" onclick="backspc()">CE</button>
+                    <button onclick="asignar('(')"> ( </button>
+                    <button onclick="asignar(')')"> ) </button>
+                </div>
+                <div class="row">
+                    <button onclick="asignar('sin(')"> sin </button>
+                    <button onclick="asignar('cos(')"> cos </button>
+                    <button onclick="asignar('tan(')"> tan </button>
+                    <button onclick="asignar('sqrt(')"> √ </button>
+                </div>
+                <div class="row">
+                    <button onclick="asignar('7')"> 7 </button>
+                    <button onclick="asignar('8')"> 8 </button>
+                    <button onclick="asignar('9')"> 9 </button>
+                    <button onclick="asignar('/')"> ÷ </button>
+                </div>
+                <div class="row">
+                    <button onclick="asignar('4')"> 4 </button>
+                    <button onclick="asignar('5')"> 5 </button>
+                    <button onclick="asignar('6')"> 6 </button>
+                    <button onclick="asignar('*')"> x </button>
+                </div>
+                <div class="row">
+                    <button onclick="asignar('1')"> 1 </button>
+                    <button onclick="asignar('2')"> 2 </button>
+                    <button onclick="asignar('3')"> 3 </button>
+                    <button onclick="asignar('-')"> - </button>
+                </div>
+                <div class="row">
+                    <button onclick="asignar('.')"> . </button>
+                    <button onclick="asignar('0')"> 0 </button>
+                    <button onclick="asignar('+')"> + </button>
+                    <button onclick="asignar('%')"> % </button>
+                </div>
+                <div class="row">
+                    <button onclick="asignar('log(')"> log </button>
+                    <button onclick="asignar('π')"> π </button>
+                    <button onclick="asignar('e')"> e </button>
+                    <button onclick="asignar('**')"> ^ </button>
+                </div>
+                <div class="row">
+                    <button id="eval" onclick="calcular()"> = </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
