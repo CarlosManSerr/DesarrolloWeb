@@ -1,0 +1,36 @@
+/* Archivo: css/estilos.css */
+
+/* Estilo general */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo claro */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+/* Ajuste de los elementos del modal en modo oscuro */
+body.dark-mode .modal-content {
+    background-color: #495057;
+    color: #ffffff;
+}
+
+/* Ajuste de los botones en modo oscuro */
+body.dark-mode .btn-close,
+body.dark-mode .btn-secondary,
+body.dark-mode .btn-primary {
+    border-color: #ffffff;
+}
+
+body.dark-mode .form-control {
+    background-color: #495057;
+    color: #ffffff;
+}
