@@ -3,13 +3,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const formularioAgregar = document.getElementById('formularioAgregar');
     const formularioEditar = document.getElementById('formularioEditar');
     const toggleModeButton = document.getElementById('toggleMode');
-    let tareas = [];
     let tareaActual;
 
-    // Inicializar modo (por defecto es modo claro)
+    let tareas = [
+        {
+            nombre: "Carlos",
+            fecha: "2024-05-14",
+            descripcion: "Aprender JS"
+        },
+        {
+            nombre: "Paco",
+            fecha: "2024-05-14",
+            descripcion: "Hacer tortas para todos"
+        },
+        {
+            nombre: "Luis",
+            fecha: "2024-05-14",
+            descripcion: "Ver la película Silk Road"
+        }
+    ];
+
     let isDarkMode = false;
 
-    // Event listener para el botón de alternar modo
     toggleModeButton.addEventListener('click', function() {
         isDarkMode = !isDarkMode;
         document.body.classList.toggle('dark-mode', isDarkMode);
