@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameUniverse</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    background-color: #6a0dad;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+.header img {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 40px;
+}
+.header h1 {
+    margin: 0;
+}
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+.game-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.image {
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.buttons button {
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+.description, .reviews {
+    background-color: #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.description {
+    height: 100px;
+}
+.reviews {
+    height: 200px;
+}
+    </style>
+    <script>
+        function agregarAlCarrito() {
+            alert("Producto agregado al carrito");
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="images/logo.png" alt="GameUniverse Logo">
+        <h1>GameUniverse</h1>
+    </div>
+    <div class="container">
+        <div class="game-title">Nombre del juego</div>
+        <div class="image">Imagen</div>
+        <div class="buttons">
+            <button>Precio</button>
+            <button>Comprar ahora</button>
+            <button onclick="agregarAlCarrito()">Carrito</button>
+        </div>
+        <div class="description">Descripción</div>
+        <div class="reviews">Reseñas</div>
+    </div>
+</body>
+</html>

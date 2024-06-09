@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.header {
+    background-color: #6A0DAD;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.cart-title {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.cart-items {
+    padding: 10px;
+}
+.cart-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+}

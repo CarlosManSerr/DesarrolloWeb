@@ -1,7 +1,8 @@
 let listaProductos = document.querySelector("#listaProductos");
 let listaCategorias = document.querySelector("#listaCategorias");
 let carrito = [];
-const URL = "https://fakestoreapi.com/products/";
+const URL = "http://localhost:3000/productos/";
+const UrlCategorias = "https://fakestoreapi.com/products/categories";
 
 fetch(URL)
     .then(response => response.json())
@@ -16,11 +17,28 @@ fetch(URL)
                     <div class="card-body">
                         <h5 class="card-title">${producto.title.slice(0,20)}</h5>
                         <p class="card-text">${producto.description.slice(0,70)}</p>
-                        <p class="card-text text-danger">${producto.price}</p>
+                        <p class="card-text text-danger">$${producto.price}</p>
                         <a href="#" class="btn btn-primary w-100">Comprar</a>
                     </div>
                 </div>
             </div>
             `;
         });
-    })
+});
+
+fetch(UrlCategorias)
+    .then(response => response.json())
+    .then(categoriasObtenidas => {
+        console.log(categoriasObtenidas);
+        listaCategorias.innerHTML="";
+        categoriasObtenidas.forEach((categoria, indice) => {
+            categoria = categoria.replace("'","");
+            listaCategorias.innerHTML += `
+            <li class="nav-item">
+                <a href="#" onclick="muestraProductos('${categoria}')" class="nav-link">
+                    ${categoria.toUpperCase()}
+                </a>
+            </li>
+            `;
+        });
+});
